@@ -21,6 +21,6 @@ cd /scratch/network/mh9610/cos484/ALCE-extension
 export HF_HOME="/scratch/network/$USER/.cache/huggingface"
 export HF_DATASETS_CACHE="/scratch/network/$USER/.cache/huggingface/datasets"
 export TRANSFORMERS_CACHE="$HF_HOME/hub"
-export HF_HUB_OFFLINE=1
+export HF_HUB_OFFLINE=0
 
 python run.py --config configs/asqa_opt-6.7b_shot1_ndoc3_gtr_default.yaml
