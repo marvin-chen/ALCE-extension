@@ -1,4 +1,5 @@
 import logging
+from huggingface_hub import snapshot_download
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -106,10 +107,10 @@ def load_model(model_name_or_path, dtype=torch.float16, int8=False, reserve_memo
     # Load the FP16 model
     from transformers import AutoModelForCausalLM, AutoTokenizer
     logger.info(f"Loading {model_name_or_path} in {dtype}...")
+    snapshot_download(repo_id=model_name_or_path, repo_type="model")
     if int8:
         logger.warn("Use LLM.int8")
     start_time = time.time()
-    print("name is: \n")
     model = AutoModelForCausalLM.from_pretrained(
         model_name_or_path,
         torch_dtype=torch.float16,

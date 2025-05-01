@@ -1,4 +1,6 @@
 import logging
+from huggingface_hub import snapshot_download
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -55,7 +57,6 @@ class LLM:
 
     def generate(self, prompt, max_tokens, stop=None):
         args = self.args
-        print("\nat generate\n")
         if max_tokens <= 0:
             self.prompt_exceed_max_length += 1
             logger.warning("Prompt exceeds max length and return an empty string as answer. If this happens too many times, it is suggested to make the prompt shorter")
@@ -130,7 +131,6 @@ class LLM:
                 self.completion_tokens += response['usage']['completion_tokens']
                 return response['choices'][0]['text']
         else:
-            print("at else\n")
             inputs = self.tokenizer([prompt], return_tensors="pt").to(self.model.device)
             # inputs = self.tokenizer([prompt], return_tensors="pt").cuda()
             stop = [] if stop is None else stop
@@ -138,8 +138,6 @@ class LLM:
             stop_token_ids = list(set([self.tokenizer._convert_token_to_id(stop_token) for stop_token in stop] + [self.model.config.eos_token_id]))
             if "llama" in args.model.lower():
                 stop_token_ids.remove(self.tokenizer.unk_token_id)
-            print("before output generate\n")
-            print("max tokens is: ", max_tokens)
             outputs = self.model.generate(
                 **inputs,
                 do_sample=True, temperature=args.temperature, top_p=args.top_p, 
@@ -307,7 +305,6 @@ def main():
 
         if idx == 0:
             print("PROMPT IS: \n", prompt)
-            print("\nend of prompt\n")
 
         output_array = []
         for _ in range(args.num_samples):
@@ -396,7 +393,6 @@ def main():
                 item['prompt'] = interactive_prompt
                 item['doc_history'] = doc_history
             else: 
-                print("\nhere\n")
                 output_array.append(llm.generate(prompt, min(args.max_new_tokens, args.max_length-prompt_len)))
                 item['prompt'] = prompt
             
@@ -522,7 +518,6 @@ class LLM:
 
     def generate(self, prompt, max_tokens, stop=None):
         args = self.args
-        print("\nat generate\n")
         if max_tokens <= 0:
             self.prompt_exceed_max_length += 1
             logger.warning("Prompt exceeds max length and return an empty string as answer. If this happens too many times, it is suggested to make the prompt shorter")
@@ -597,7 +592,6 @@ class LLM:
                 self.completion_tokens += response['usage']['completion_tokens']
                 return response['choices'][0]['text']
         else:
-            print("at else\n")
             inputs = self.tokenizer([prompt], return_tensors="pt").to(self.model.device)
             # inputs = self.tokenizer([prompt], return_tensors="pt").cuda()
             stop = [] if stop is None else stop
@@ -605,8 +599,6 @@ class LLM:
             stop_token_ids = list(set([self.tokenizer._convert_token_to_id(stop_token) for stop_token in stop] + [self.model.config.eos_token_id]))
             if "llama" in args.model.lower():
                 stop_token_ids.remove(self.tokenizer.unk_token_id)
-            print("before output generate\n")
-            print("max tokens is: ", max_tokens)
             outputs = self.model.generate(
                 **inputs,
                 do_sample=True, temperature=args.temperature, top_p=args.top_p, 
@@ -774,7 +766,6 @@ def main():
 
         if idx == 0:
             print("PROMPT IS: \n", prompt)
-            print("\nend of prompt\n")
 
         output_array = []
         for _ in range(args.num_samples):
@@ -863,7 +854,6 @@ def main():
                 item['prompt'] = interactive_prompt
                 item['doc_history'] = doc_history
             else: 
-                print("\nhere\n")
                 output_array.append(llm.generate(prompt, min(args.max_new_tokens, args.max_length-prompt_len)))
                 item['prompt'] = prompt
             
