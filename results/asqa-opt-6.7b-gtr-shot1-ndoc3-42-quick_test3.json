@@ -1,0 +1,306 @@
+{
+    "args": {
+        "config": "configs/asqa_opt-6.7b_shot1_ndoc3_gtr_default.yaml",
+        "prompt_file": "prompts/asqa_default.json",
+        "eval_file": "data/asqa_eval_gtr_top100.json",
+        "quick_test": 3,
+        "ndoc": 3,
+        "shot": 1,
+        "seed": 42,
+        "no_doc_in_demo": false,
+        "fewer_doc_in_demo": false,
+        "ndoc_in_demo": null,
+        "dataset_name": "asqa",
+        "tag": "gtr",
+        "model": "facebook/opt-6.7b",
+        "openai_api": false,
+        "azure": false,
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "max_new_tokens": 300,
+        "max_length": 2048,
+        "num_samples": 1,
+        "use_shorter": null,
+        "interactive": false,
+        "interactive_query": null,
+        "retriever": null,
+        "retriever_device": "cuda",
+        "retrieve_in_all_docs": false,
+        "max_turn": 10,
+        "max_doc_show": 3,
+        "force_cite_show": false
+    },
+    "data": [
+        {
+            "qa_pairs": [
+                {
+                    "context": "Holi (); is a popular ancient Hindu festival, originating from the Indian subcontinent. It is celebrated predominantly in India, but has also spread to other areas of Asia and parts of the Western world through the diaspora from the Indian subcontinent. Holi is popularly known as the Indian \"festival of spring\", the \"festival of colours\", or the \"festival of love\". The festival signifies the arrival of spring, the end of winter, the blossoming of love, and for many a festive day to meet others, play and laugh, forget and forgive, and repair broken relationships. The festival also celebrates the beginning of a good spring harvest season. It lasts for a night and a day, starting on the evening of the Purnima (Full Moon day) falling in the Vikram Samvat Calendar, in the Hindu calendar month of Phalguna, which falls around middle of March in the Gregorian calendar. The first evening is known as Holika Dahan (burning of demon holika) or Chhoti Holi and the following day as Holi, Rangwali Holi, Dhuleti, Dhulandi, or Phagwah.",
+                    "question": "The festival of holi marks the end of winter and the beginning of which season?",
+                    "short_answers": [
+                        "spring harvest season",
+                        "spring"
+                    ],
+                    "wikipage": "Holi"
+                },
+                {
+                    "context": "Holi (); is a popular ancient Hindu festival, originating from the Indian subcontinent. It is celebrated predominantly in India, but has also spread to other areas of Asia and parts of the Western world through the diaspora from the Indian subcontinent. Holi is popularly known as the Indian \"festival of spring\", the \"festival of colours\", or the \"festival of love\". The festival signifies the arrival of spring, the end of winter, the blossoming of love, and for many a festive day to meet others, play and laugh, forget and forgive, and repair broken relationships. The festival also celebrates the beginning of a good spring harvest season. It lasts for a night and a day, starting on the evening of the Purnima (Full Moon day) falling in the Vikram Samvat Calendar, in the Hindu calendar month of Phalguna, which falls around middle of March in the Gregorian calendar. The first evening is known as Holika Dahan (burning of demon holika) or Chhoti Holi and the following day as Holi, Rangwali Holi, Dhuleti, Dhulandi, or Phagwah.",
+                    "question": "The festival of holi marks the end of winter and the beginning of which feeling?",
+                    "short_answers": [
+                        "love"
+                    ],
+                    "wikipage": "Holi"
+                }
+            ],
+            "wikipages": [
+                {
+                    "title": "Holi",
+                    "url": "https://en.wikipedia.org/wiki/Holi"
+                }
+            ],
+            "annotations": [
+                {
+                    "knowledge": [
+                        {
+                            "content": "The festival celebrates the eternal and divine love of Radha Krishna.",
+                            "wikipage": "Holi"
+                        }
+                    ],
+                    "long_answer": "The festival of Holi, which celebrates the eternal and divine love of Radha Krishna, marks the end of winter and the beginning of the spring harvest season. Holi also signifies love or the blossoming of love. It lasts for a night and a day, starting on the evening of the Purnima (Full Moon day) falling in the Vikram Samvat Calendar, in the Hindu calendar month of Phalguna. "
+                },
+                {
+                    "knowledge": [
+                        {
+                            "content": "Holi ( /\u02c8ho\u028ali\u02d0/) is a popular ancient Indian festival, also known as the \"Festival of Love\", the \"Festival of Colours\" and the \"Festival of Spring\"",
+                            "wikipage": "Holi"
+                        },
+                        {
+                            "content": "Holi celebrates the arrival of spring, the end of winter, the blossoming of love and for many, it is a festive day to meet others, play and laugh, forget and forgive, and repair broken relationships.",
+                            "wikipage": "Holi"
+                        },
+                        {
+                            "content": null,
+                            "wikipage": "Holi"
+                        }
+                    ],
+                    "long_answer": "Holi ( /\u02c8ho\u028ali\u02d0/) is a popular ancient Indian festival, also known as the \"Festival of Love\", the \"Festival of Colours\" and the \"Festival of Spring\". Holi celebrates the arrival of spring, the end of winter, the blossoming of love and for many, it is a festive day to meet others, play and laugh, forget and forgive, and repair broken relationships."
+                }
+            ],
+            "sample_id": "9175108727427752581",
+            "question": "The festival of holi marks the end of winter and the beginning of?",
+            "docs": [
+                {
+                    "id": "2706630",
+                    "title": "Holi",
+                    "text": "Holi Holi (; \"Hol\u012b\") is a Hindu spring festival, originating from the Indian subcontinent, celebrated predominantly in India, but has also spread to other areas of Asia and parts of the Western world through the diaspora from the Indian subcontinent, also known as the \"festival of colours\" or the \"festival of love\". The festival signifies the victory of good over evil, the arrival of spring, end of winter, and for many a festive day to meet others, play and laugh, forget and forgive, and repair broken relationships. It is also celebrated as a thanksgiving for a good harvest. It lasts",
+                    "score": 0.82080078125,
+                    "summary": "The festival of Holi marks the end of winter and the beginning of spring.",
+                    "extraction": "\"The festival of holi\" marks \"the end of winter\" and \"the beginning of\" spring."
+                },
+                {
+                    "id": "2706644",
+                    "title": "Holi",
+                    "text": "to throw coloured water at friends or strangers in jest. It is also observed broadly in the Indian subcontinent. Holi is celebrated at the end of winter, on the last full moon day of the Hindu luni-solar calendar month marking the spring, making the date vary with the lunar cycle. The date falls typically in March, but sometimes late February of the Gregorian calendar. The festival has many purposes; most prominently, it celebrates the beginning of Spring. In 17th century literature, it was identified as a festival that celebrated agriculture, commemorated good spring harvests and the fertile land. Hindus believe",
+                    "score": 0.7978515625,
+                    "summary": "Holi marks the beginning of spring.",
+                    "extraction": "\"The festival of holi marks the beginning of Spring.\""
+                },
+                {
+                    "id": "2706645",
+                    "title": "Holi",
+                    "text": "it is a time of enjoying spring's abundant colours and saying farewell to winter. To many Hindus, Holi festivities mark the beginning of the new year as well as an occasion to reset and renew ruptured relationships, end conflicts and rid themselves of accumulated emotional impurities from the past. It also has a religious purpose, symbolically signified by the legend of Holika. The night before Holi, bonfires are lit in a ceremony known as Holika Dahan (burning of Holika) or Little Holi. People gather near fires, sing and dance. The next day, Holi, also known as \"Dhuli\" in Sanskrit, or",
+                    "score": 0.77734375,
+                    "summary": "The festival of Holi marks the end of winter and the beginning of the new year, as well as a time to reset relationships and rid oneself of emotional impurities. The night before Holi, bonfires are lit in a ceremony known as Holika Dahan.",
+                    "extraction": "The festival of holi marks the end of winter and the beginning of the new year for many Hindus, as well as an occasion to reset and renew ruptured relationships, end conflicts, and rid themselves of accumulated emotional impurities from the past."
+                }
+            ],
+            "answer": "Holi ( /\u02c8ho\u028ali\u02d0/) is a popular ancient Indian festival, also known as the \"Festival of Love\", the \"Festival of Colours\" and the \"Festival of Spring\". Holi celebrates the arrival of spring, the end of winter, the blossoming of love and for many, it is a festive day to meet others, play and laugh, forget and forgive, and repair broken relationships.",
+            "prompt": "Instruction: Write an accurate, engaging, and concise answer for the given question using only the provided search results (some of which might be irrelevant) and cite them properly. Use an unbiased and journalistic tone. Always cite for any factual claim. When citing several search results, use [1][2][3]. Cite at least one document and at most three documents in each sentence. If multiple documents support the sentence, only cite a minimum sufficient subset of the documents.\n\nQuestion: When did the us break away from england?\n\nDocument [1](Title: United States withdrawal from Saudi Arabia): United States withdrawal from Saudi Arabia Beginning during Operation Desert Shield in August 1990, while preparing for the Gulf War, the United States sent a large troop contingent to Saudi Arabia. After the war, remnant troops, primarily U.S. Air Force personnel, augmented by a smaller number of coordinating and training personnel from the U.S. Navy, U.S. Army and U.S. Marine Corps remained in Saudi Arabia under the aegis of Joint Task Force Southwest Asia (JTF-SWA), as part of Operation Southern Watch (OSW). The United Kingdom and France also maintained a small contingent of Royal Air Force and French Air Force\nDocument [2](Title: Decolonization of the Americas): and France has fully \"integrated\" most of its former colonies as fully constituent \"departments\" of France. The United States of America declared independence from Great Britain on July 2, 1776 (although the event is now commemorated on July 4, the date when the Declaration of Independence was officially adopted by Congress), in so doing becoming the first independent, foreign-recognized nation in the Americas and the first European colonial entity to break from its mother country. Britain formally acknowledged American independence in 1783 after its defeat in the American Revolutionary War. Although initially occupying only the land east of the Mississippi\nDocument [3](Title: American Revolution): second British army at Yorktown in the fall of 1781, effectively ending the war. The Treaty of Paris was signed September 3, 1783, formally ending the conflict and confirming the new nation's complete separation from the British Empire. The United States took possession of nearly all the territory east of the Mississippi River and south of the Great Lakes, with the British retaining control of Canada and Spain taking Florida. Among the significant results of the revolution was the creation of the United States Constitution, establishing a relatively strong federal national government that included an executive, a national judiciary, and\n\nAnswer:The United States took the first step towards gaining independence from Great Britain when it declared independence from Great Britain on July 2, 1776 (although the event is now commemorated on July 4, 1776, the date when the Declaration of Independence was officially adopted by Congress) [2]. The Treaty of Paris was later signed on September 3, 1783, formally separating the United States from the British Empire [3].\n\n\nInstruction: Write an accurate, engaging, and concise answer for the given question using only the provided search results (some of which might be irrelevant) and cite them properly. Use an unbiased and journalistic tone. Always cite for any factual claim. When citing several search results, use [1][2][3]. Cite at least one document and at most three documents in each sentence. If multiple documents support the sentence, only cite a minimum sufficient subset of the documents.\n\nQuestion: The festival of holi marks the end of winter and the beginning of?\n\nDocument [1](Title: Holi): Holi Holi (; \"Hol\u012b\") is a Hindu spring festival, originating from the Indian subcontinent, celebrated predominantly in India, but has also spread to other areas of Asia and parts of the Western world through the diaspora from the Indian subcontinent, also known as the \"festival of colours\" or the \"festival of love\". The festival signifies the victory of good over evil, the arrival of spring, end of winter, and for many a festive day to meet others, play and laugh, forget and forgive, and repair broken relationships. It is also celebrated as a thanksgiving for a good harvest. It lasts\nDocument [2](Title: Holi): to throw coloured water at friends or strangers in jest. It is also observed broadly in the Indian subcontinent. Holi is celebrated at the end of winter, on the last full moon day of the Hindu luni-solar calendar month marking the spring, making the date vary with the lunar cycle. The date falls typically in March, but sometimes late February of the Gregorian calendar. The festival has many purposes; most prominently, it celebrates the beginning of Spring. In 17th century literature, it was identified as a festival that celebrated agriculture, commemorated good spring harvests and the fertile land. Hindus believe\nDocument [3](Title: Holi): it is a time of enjoying spring's abundant colours and saying farewell to winter. To many Hindus, Holi festivities mark the beginning of the new year as well as an occasion to reset and renew ruptured relationships, end conflicts and rid themselves of accumulated emotional impurities from the past. It also has a religious purpose, symbolically signified by the legend of Holika. The night before Holi, bonfires are lit in a ceremony known as Holika Dahan (burning of Holika) or Little Holi. People gather near fires, sing and dance. The next day, Holi, also known as \"Dhuli\" in Sanskrit, or\n\nAnswer:",
+            "output": "Holi originated in India. Holi is celebrated at the end of winter, on the last full moon day of the Hindu luni-solar calendar month marking the spring, making the date vary with the lunar cycle. The date falls typically in March, but sometimes late February of the Gregorian calendar. The festival has many purposes; most prominently, it celebrates the beginning of Spring. In 17th century literature, it was identified as a festival that celebrated agriculture, commemorated good spring harvests and the fertile land. Hindus believe Holi is a time of enjoying spring's abundant colours and saying farewell to winter. To many Hindus, Holi festivities mark the beginning of the new year as well as an occasion to reset and renew ruptured relationships, end conflicts and rid themselves of accumulated emotional impurities from the past. It also has a religious purpose, symbolically signified by the legend of Holika. The night before Holi, bonfires are lit in a ceremony known as Holika Dahan (burning of Holika) or Little Holi. People gather near fires, sing and dance. The next day, Holi, also known as \"Dhuli\" in Sanskrit, or Holi in Hindi and Bengali, the festival is celebrated\n\nDocument:\n\nAnswer:Holi originated in India. Holi is celebrated at the end of winter, on the last full moon day of the Hindu luni-solar calendar month marking the spring, making the"
+        },
+        {
+            "qa_pairs": [
+                {
+                    "context": "No context provided",
+                    "question": "Which members of the Union did the Virginia Plan give more power to?",
+                    "short_answers": [
+                        "larger states",
+                        "Large States"
+                    ],
+                    "wikipage": null
+                },
+                {
+                    "context": "Additionally, the plan proposed that the legislative branch would have the power to veto state laws if they were deemed incompatible with the articles of union, or the states were deemed incompetent.",
+                    "question": "Which branch did the Virginia Plan give more power to?",
+                    "short_answers": [
+                        "legislative branch"
+                    ],
+                    "wikipage": "Virginia Plan"
+                }
+            ],
+            "wikipages": [
+                {
+                    "title": "Virginia Plan",
+                    "url": "https://en.wikipedia.org/wiki/Virginia%20Plan"
+                }
+            ],
+            "annotations": [
+                {
+                    "knowledge": [
+                        {
+                            "content": "The Virginia Plan (also known as the Randolph Plan, after its sponsor, or the Large-State Plan) was a proposal to the United States Constitutional Convention for the creation of a supreme national government with three branches and a bicameral legislature.",
+                            "wikipage": "Virginia Plan"
+                        }
+                    ],
+                    "long_answer": "The Virginia Plan which proposed the creation of a supreme national government with three branches and a bicameral legislature, gave more power to larger states, additionally the plan proposed that the legislative branch would have the power to veto state laws."
+                },
+                {
+                    "knowledge": [
+                        {
+                            "content": "The Virginia Plan (also known as the Randolph Plan, after its sponsor, or the Large-State Plan) was a proposal to the United States Constitutional Convention for the creation of a supreme national government with three branches and a bicameral legislature.",
+                            "wikipage": "Virginia Plan"
+                        },
+                        {
+                            "content": "2. This would provide large states, like Virginia, more representation than they had under the Articles of Confederation, which gave each state equal representation regardless of population. For this reason, the plan was called the \"large-state plan\".[13]",
+                            "wikipage": "Virginia Plan Resolutions"
+                        }
+                    ],
+                    "long_answer": "The Virginia Plan, also known as the Randolph Plan, after its sponsor, or the Large-State Plan, was a proposal to the United States Constitutional Convention for the creation of a supreme national government with three branches and a bicameral legislature. This would provide large states, like Virginia, more representation than they had under the Articles of Confederation, which gave each state equal representation regardless of population. For this reason, the plan was called the \"large-state plan\". Additionally, the plan proposed that the legislative branch would have the power to veto state laws if they were deemed incompatible with the articles of union, or the states were deemed incompetent."
+                }
+            ],
+            "sample_id": "-2427005357321258325",
+            "question": "Who did the virginia plan give more power to?",
+            "docs": [
+                {
+                    "id": "4934026",
+                    "title": "Constitutional Convention (United States)",
+                    "text": "and would therefore be selected by the legislature. The Virginia Plan also created a judiciary, and gave both the executive and some of the judiciary the power to veto, subject to override. After the Virginia Plan was introduced, New Jersey delegate William Paterson asked for an adjournment to contemplate the Plan. Under the Articles of Confederation, each state had equal representation in Congress, exercising one vote each. The Virginia Plan threatened to limit the smaller states' power by making both houses of the legislature proportionate to population. On June 14 and 15, 1787, a small-state caucus met to create a",
+                    "score": 0.7978515625,
+                    "summary": "The Virginia Plan gave more power to the larger states by making both houses of the legislature proportionate to population.",
+                    "extraction": "The Virginia Plan gave more power to the larger states by making both houses of the legislature proportionate to population."
+                },
+                {
+                    "id": "209826",
+                    "title": "James Madison",
+                    "text": "George Mason, to create and present the plan to the convention. The plan called for three branches of government (legislative, executive, and judicial), a bicameral Congress apportioned by population, and a Council of Revision composed of members of the executive and judicial branches which would have the right to veto laws passed by Congress. Reflecting the centralization of power envisioned by Madison, the Virginia Plan granted the United States Senate the power to abrogate any law passed by state governments. Many delegates were surprised to learn that the plan called for the abrogation of the Articles and the creation of",
+                    "score": 0.794921875,
+                    "summary": "The Virginia Plan gave more power to the United States Senate.",
+                    "extraction": "The Virginia Plan granted more power to the United States Senate."
+                },
+                {
+                    "id": "11826402",
+                    "title": "Confederation Period",
+                    "text": "for the consideration of an entirely new constitution, as open consideration of a new constitution would likely have inspired great public outcry. Shortly after the start of the convention, Virginia's delegates introduced a set of reforms known as the Virginia Plan. Drafted by Madison, the Virginia Plan called for a stronger national government with three independent branches of government: executive, legislative, and judicial. The plan granted the federal government legislative power on all issues, as well as the power to nullify state laws. Madison's plan was well-received and served as the basis for the convention's discussion, though several of its",
+                    "score": 0.775390625,
+                    "summary": "The Virginia Plan gave more power to the federal government, with legislative power on all issues and the power to nullify state laws.",
+                    "extraction": "The Virginia Plan granted the federal government legislative power on all issues, as well as the power to nullify state laws. Therefore, the Virginia Plan gave more power to the federal government."
+                }
+            ],
+            "answer": "The Virginia Plan, also known as the Randolph Plan, after its sponsor, or the Large-State Plan, was a proposal to the United States Constitutional Convention for the creation of a supreme national government with three branches and a bicameral legislature. This would provide large states, like Virginia, more representation than they had under the Articles of Confederation, which gave each state equal representation regardless of population. For this reason, the plan was called the \"large-state plan\". Additionally, the plan proposed that the legislative branch would have the power to veto state laws if they were deemed incompatible with the articles of union, or the states were deemed incompetent.",
+            "prompt": "Instruction: Write an accurate, engaging, and concise answer for the given question using only the provided search results (some of which might be irrelevant) and cite them properly. Use an unbiased and journalistic tone. Always cite for any factual claim. When citing several search results, use [1][2][3]. Cite at least one document and at most three documents in each sentence. If multiple documents support the sentence, only cite a minimum sufficient subset of the documents.\n\nQuestion: When did the us break away from england?\n\nDocument [1](Title: United States withdrawal from Saudi Arabia): United States withdrawal from Saudi Arabia Beginning during Operation Desert Shield in August 1990, while preparing for the Gulf War, the United States sent a large troop contingent to Saudi Arabia. After the war, remnant troops, primarily U.S. Air Force personnel, augmented by a smaller number of coordinating and training personnel from the U.S. Navy, U.S. Army and U.S. Marine Corps remained in Saudi Arabia under the aegis of Joint Task Force Southwest Asia (JTF-SWA), as part of Operation Southern Watch (OSW). The United Kingdom and France also maintained a small contingent of Royal Air Force and French Air Force\nDocument [2](Title: Decolonization of the Americas): and France has fully \"integrated\" most of its former colonies as fully constituent \"departments\" of France. The United States of America declared independence from Great Britain on July 2, 1776 (although the event is now commemorated on July 4, the date when the Declaration of Independence was officially adopted by Congress), in so doing becoming the first independent, foreign-recognized nation in the Americas and the first European colonial entity to break from its mother country. Britain formally acknowledged American independence in 1783 after its defeat in the American Revolutionary War. Although initially occupying only the land east of the Mississippi\nDocument [3](Title: American Revolution): second British army at Yorktown in the fall of 1781, effectively ending the war. The Treaty of Paris was signed September 3, 1783, formally ending the conflict and confirming the new nation's complete separation from the British Empire. The United States took possession of nearly all the territory east of the Mississippi River and south of the Great Lakes, with the British retaining control of Canada and Spain taking Florida. Among the significant results of the revolution was the creation of the United States Constitution, establishing a relatively strong federal national government that included an executive, a national judiciary, and\n\nAnswer:The United States took the first step towards gaining independence from Great Britain when it declared independence from Great Britain on July 2, 1776 (although the event is now commemorated on July 4, 1776, the date when the Declaration of Independence was officially adopted by Congress) [2]. The Treaty of Paris was later signed on September 3, 1783, formally separating the United States from the British Empire [3].\n\n\nInstruction: Write an accurate, engaging, and concise answer for the given question using only the provided search results (some of which might be irrelevant) and cite them properly. Use an unbiased and journalistic tone. Always cite for any factual claim. When citing several search results, use [1][2][3]. Cite at least one document and at most three documents in each sentence. If multiple documents support the sentence, only cite a minimum sufficient subset of the documents.\n\nQuestion: Who did the virginia plan give more power to?\n\nDocument [1](Title: Constitutional Convention (United States)): and would therefore be selected by the legislature. The Virginia Plan also created a judiciary, and gave both the executive and some of the judiciary the power to veto, subject to override. After the Virginia Plan was introduced, New Jersey delegate William Paterson asked for an adjournment to contemplate the Plan. Under the Articles of Confederation, each state had equal representation in Congress, exercising one vote each. The Virginia Plan threatened to limit the smaller states' power by making both houses of the legislature proportionate to population. On June 14 and 15, 1787, a small-state caucus met to create a\nDocument [2](Title: James Madison): George Mason, to create and present the plan to the convention. The plan called for three branches of government (legislative, executive, and judicial), a bicameral Congress apportioned by population, and a Council of Revision composed of members of the executive and judicial branches which would have the right to veto laws passed by Congress. Reflecting the centralization of power envisioned by Madison, the Virginia Plan granted the United States Senate the power to abrogate any law passed by state governments. Many delegates were surprised to learn that the plan called for the abrogation of the Articles and the creation of\nDocument [3](Title: Confederation Period): for the consideration of an entirely new constitution, as open consideration of a new constitution would likely have inspired great public outcry. Shortly after the start of the convention, Virginia's delegates introduced a set of reforms known as the Virginia Plan. Drafted by Madison, the Virginia Plan called for a stronger national government with three independent branches of government: executive, legislative, and judicial. The plan granted the federal government legislative power on all issues, as well as the power to nullify state laws. Madison's plan was well-received and served as the basis for the convention's discussion, though several of its\n\nAnswer:",
+            "output": "The United States took the first step towards gaining independence from Great Britain when it declared independence from Great Britain on July 2, 1776 (although the event is now commemorated on July 4, 1776, the date when the Declaration of Independence was officially adopted by Congress) [1]. The Treaty of Paris was later signed on September 3, 1783, formally separating the United States from the British Empire [2]. After the Virginia Plan was introduced, New Jersey delegate William Paterson asked for an adjournment to contemplate the Plan. Under the Articles of Confederation, each state had equal representation in Congress, exercising one vote each. The Virginia Plan threatened to limit the smaller states' power by making both houses of the legislature proportionate to population. On June 14 and 15, 1787, a small-state caucus met to create a\nDocument [2](Title: James Madison): George Mason, to create and present the plan to the convention. The plan called for three branches of government (legislative, executive, and judicial), a bicameral Congress apportioned by population, and a Council of Revision composed of members of the executive and judicial branches which would have the right to veto laws passed by Congress. Reflecting the centralization of power envisioned by Madison, the Virginia Plan granted the United States Senate the power to abrogate any law passed by state governments. Many delegates were surprised to learn that the plan called for the abrogation of the Articles and the creation of"
+        },
+        {
+            "qa_pairs": [
+                {
+                    "context": "In 1995, the Royal New Zealand Yacht Squadron syndicate Team New Zealand, skippered by Russell Coutts, first won the challenger series in \"NZL 32\", dubbed \"Black Magic\" because of her black hull and uncanny speed. Black Magic then easily defeated Dennis Connor's Stars & Stripes team, 5\u20130, to win the cup for New Zealand. Although team Young America's cup candidate yacht \"USA-36\" was defeated in defender trials by Stars & Stripes' \"USA-34\", the San Diego Yacht Club elected to defend the cup with \"USA-36\" crewed by Stars & Stripes. The run-up to the 1995 Cup was notable for the televised sinking of \"oneAustralia\" during the fourth round robin of the Louis Vuitton challenger selection series, with all hands escaping uninjured. The 1995 defender selection series also had the first mostly female (with one man) crew sailing the yacht \"USA-43\", nicknamed \"Mighty Mary\".",
+                    "question": "When did the Royal New Zealand Yacht Squadron win its first America's Cup?",
+                    "short_answers": [
+                        "29th America's Cup",
+                        "6\u201313 May 1995",
+                        "1995"
+                    ],
+                    "wikipage": "America's Cup"
+                },
+                {
+                    "context": "No context provided",
+                    "question": "When did the Royal New Zealand Yacht Squadron win its first defense of the America's Cup?",
+                    "short_answers": [
+                        "20 February \u2013 2 March 2000",
+                        "30th America's Cup",
+                        "2000"
+                    ],
+                    "wikipage": null
+                },
+                {
+                    "context": "No context provided",
+                    "question": "When did the Royal New Zealand Yacht Squadron win its second America's Cup?",
+                    "short_answers": [
+                        "35th staging of the America's Cup yacht race",
+                        "17\u201326 June 2017",
+                        "2017 America's Cup",
+                        "2017"
+                    ],
+                    "wikipage": null
+                }
+            ],
+            "wikipages": [
+                {
+                    "title": "2017 America's Cup",
+                    "url": "https://en.wikipedia.org/wiki/2017%20America%27s%20Cup"
+                },
+                {
+                    "title": "America's Cup",
+                    "url": "https://en.wikipedia.org/wiki/America%27s%20Cup"
+                },
+                {
+                    "title": "Team New Zealand",
+                    "url": "https://en.wikipedia.org/wiki/Team%20New%20Zealand"
+                },
+                {
+                    "title": "2000 America's Cup",
+                    "url": "https://en.wikipedia.org/wiki/2000%20America%27s%20Cup"
+                }
+            ],
+            "annotations": [
+                {
+                    "knowledge": [],
+                    "long_answer": "In 1995 the Royal New Zealand Yacht Squadron won its first America's Cup. And in 2000 the team won its first defense of the America's Cup. Then in 2017 they won their second America's Cup."
+                },
+                {
+                    "knowledge": [
+                        {
+                            "content": "The Royal New Zealand Yacht Squadron is a New Zealand yacht club, and the club behind New Zealand's America's Cup campaigns, under the guises of New Zealand Challenge and Team New Zealand.",
+                            "wikipage": "Royal New Zealand Yacht Squadron"
+                        },
+                        {
+                            "content": "On March 21, 2021 they beat Circolo della Vela Sicilia's Luna Rossa Challenge to again win the 2021 America's Cup.",
+                            "wikipage": "Royal New Zealand Yacht Squadron"
+                        }
+                    ],
+                    "long_answer": "The Royal New Zealand Yacht Squadron yacht club has won the America's Cup a number of times. The club first won it at the 29th America's Cup in 1995 then won its first defense of the America's Cup at the 30th America's Cup in 2000. The club later won its second America's Cup at the 2017 America's Cup, the 35th staging of the America's Cup yacht race. On March 21, 2021, the club defeated Circolo della Vela Sicilia's Luna Rossa Challenge to win the 2021 America's Cup."
+                }
+            ],
+            "sample_id": "7652576904728829439",
+            "question": "When did new zealand win the americas cup?",
+            "docs": [
+                {
+                    "id": "4957171",
+                    "title": "Sport in New Zealand",
+                    "text": "and are currently the only country apart from Australia to have won World Champs, (1956,1998) which is respectable considering the comparatively small size of the sport in the country. Auckland hosted consecutive America's Cup regattas in 2000 and 2003. In 2000, Team New Zealand successfully defended the trophy they won in 1995 in San Diego, but in 2003 they lost to a team headed by Ernesto Bertarelli of Switzerland whose \"Alinghi\" was skippered by Russell Coutts, the expatriate Kiwi who helmed the victorious \"Black Magic\" in 1995 and \"New Zealand\" in 2000 as well as many other Kiwis. Coutts and",
+                    "score": 0.82666015625,
+                    "summary": "Team New Zealand won the America's Cup in 2000, defending the trophy they won in 1995, but lost in 2003 to a team headed by Ernesto Bertarelli of Switzerland.",
+                    "extraction": "In 2000, Team New Zealand successfully defended the trophy they won in 1995 in San Diego."
+                },
+                {
+                    "id": "7528465",
+                    "title": "Team New Zealand",
+                    "text": "of development, Team New Zealand entered into a technology sharing programme with the Italian team who had an identical boat and were also based in Auckland. Since Team New Zealand's July 2012 launch, their first AC 72 boat proved fast and reliable, foil sailing for long periods of time at speeds over with no breakages. In August 2013, Team New Zealand won the America's Cup challenger series (Louis Vuitton Cup) by defeating the Prada Luna Rossa Syndicate 7\u20131 and in September 2013 Team New Zealand challenged the Oracle syndicate for the America's Cup. The race series was very dramatic, with",
+                    "score": 0.8115234375,
+                    "summary": "Team New Zealand won the America's Cup challenger series in August 2013 by defeating the Prada Luna Rossa Syndicate 7-1 and challenged the Oracle syndicate for the America's Cup in September 2013.",
+                    "extraction": "In September 2013, Team New Zealand challenged the Oracle syndicate for the America's Cup."
+                },
+                {
+                    "id": "7528454",
+                    "title": "Team New Zealand",
+                    "text": "Team New Zealand Team New Zealand or TNZ is a sailing team based in Auckland, New Zealand representing the Royal New Zealand Yacht Squadron. Team New Zealand became a household name in their home country following their consecutive wins in the America's Cup in 1995 and 2000, under the leadership of Sir Peter Blake, when becoming the first team from a country outside the United States to win and successfully defend the America's Cup. In 2017, skippered by Glenn Ashby, they went on to retake the America's Cup. Three challenges were launched before the founding of Team New Zealand, all",
+                    "score": 0.8046875,
+                    "summary": "Team New Zealand won the America's Cup in 1995, 2000, and 2017.",
+                    "extraction": "Team New Zealand won the America's Cup in 1995 and 2000."
+                }
+            ],
+            "answer": "The Royal New Zealand Yacht Squadron yacht club has won the America's Cup a number of times. The club first won it at the 29th America's Cup in 1995 then won its first defense of the America's Cup at the 30th America's Cup in 2000. The club later won its second America's Cup at the 2017 America's Cup, the 35th staging of the America's Cup yacht race. On March 21, 2021, the club defeated Circolo della Vela Sicilia's Luna Rossa Challenge to win the 2021 America's Cup.",
+            "prompt": "Instruction: Write an accurate, engaging, and concise answer for the given question using only the provided search results (some of which might be irrelevant) and cite them properly. Use an unbiased and journalistic tone. Always cite for any factual claim. When citing several search results, use [1][2][3]. Cite at least one document and at most three documents in each sentence. If multiple documents support the sentence, only cite a minimum sufficient subset of the documents.\n\nQuestion: When did the us break away from england?\n\nDocument [1](Title: United States withdrawal from Saudi Arabia): United States withdrawal from Saudi Arabia Beginning during Operation Desert Shield in August 1990, while preparing for the Gulf War, the United States sent a large troop contingent to Saudi Arabia. After the war, remnant troops, primarily U.S. Air Force personnel, augmented by a smaller number of coordinating and training personnel from the U.S. Navy, U.S. Army and U.S. Marine Corps remained in Saudi Arabia under the aegis of Joint Task Force Southwest Asia (JTF-SWA), as part of Operation Southern Watch (OSW). The United Kingdom and France also maintained a small contingent of Royal Air Force and French Air Force\nDocument [2](Title: Decolonization of the Americas): and France has fully \"integrated\" most of its former colonies as fully constituent \"departments\" of France. The United States of America declared independence from Great Britain on July 2, 1776 (although the event is now commemorated on July 4, the date when the Declaration of Independence was officially adopted by Congress), in so doing becoming the first independent, foreign-recognized nation in the Americas and the first European colonial entity to break from its mother country. Britain formally acknowledged American independence in 1783 after its defeat in the American Revolutionary War. Although initially occupying only the land east of the Mississippi\nDocument [3](Title: American Revolution): second British army at Yorktown in the fall of 1781, effectively ending the war. The Treaty of Paris was signed September 3, 1783, formally ending the conflict and confirming the new nation's complete separation from the British Empire. The United States took possession of nearly all the territory east of the Mississippi River and south of the Great Lakes, with the British retaining control of Canada and Spain taking Florida. Among the significant results of the revolution was the creation of the United States Constitution, establishing a relatively strong federal national government that included an executive, a national judiciary, and\n\nAnswer:The United States took the first step towards gaining independence from Great Britain when it declared independence from Great Britain on July 2, 1776 (although the event is now commemorated on July 4, 1776, the date when the Declaration of Independence was officially adopted by Congress) [2]. The Treaty of Paris was later signed on September 3, 1783, formally separating the United States from the British Empire [3].\n\n\nInstruction: Write an accurate, engaging, and concise answer for the given question using only the provided search results (some of which might be irrelevant) and cite them properly. Use an unbiased and journalistic tone. Always cite for any factual claim. When citing several search results, use [1][2][3]. Cite at least one document and at most three documents in each sentence. If multiple documents support the sentence, only cite a minimum sufficient subset of the documents.\n\nQuestion: When did new zealand win the americas cup?\n\nDocument [1](Title: Sport in New Zealand): and are currently the only country apart from Australia to have won World Champs, (1956,1998) which is respectable considering the comparatively small size of the sport in the country. Auckland hosted consecutive America's Cup regattas in 2000 and 2003. In 2000, Team New Zealand successfully defended the trophy they won in 1995 in San Diego, but in 2003 they lost to a team headed by Ernesto Bertarelli of Switzerland whose \"Alinghi\" was skippered by Russell Coutts, the expatriate Kiwi who helmed the victorious \"Black Magic\" in 1995 and \"New Zealand\" in 2000 as well as many other Kiwis. Coutts and\nDocument [2](Title: Team New Zealand): of development, Team New Zealand entered into a technology sharing programme with the Italian team who had an identical boat and were also based in Auckland. Since Team New Zealand's July 2012 launch, their first AC 72 boat proved fast and reliable, foil sailing for long periods of time at speeds over with no breakages. In August 2013, Team New Zealand won the America's Cup challenger series (Louis Vuitton Cup) by defeating the Prada Luna Rossa Syndicate 7\u20131 and in September 2013 Team New Zealand challenged the Oracle syndicate for the America's Cup. The race series was very dramatic, with\nDocument [3](Title: Team New Zealand): Team New Zealand Team New Zealand or TNZ is a sailing team based in Auckland, New Zealand representing the Royal New Zealand Yacht Squadron. Team New Zealand became a household name in their home country following their consecutive wins in the America's Cup in 1995 and 2000, under the leadership of Sir Peter Blake, when becoming the first team from a country outside the United States to win and successfully defend the America's Cup. In 2017, skippered by Glenn Ashby, they went on to retake the America's Cup. Three challenges were launched before the founding of Team New Zealand, all\n\nAnswer:",
+            "output": "New Zealand won the first Cup in 1851 under the leadership of Charles Dickens, as of 2013 they are the only country apart from Australia to have won the Cup (1956, 1998), which is impressive considering the comparatively small size of the sport in the country. Auckland hosted consecutive America's Cup regattas in 2000 and 2003. In 2000, Team New Zealand successfully defended the trophy they won in 1995 in San Diego, but in 2003 they lost to a team headed by Ernesto Bertarelli of Switzerland whose \"Alinghi\" was skippered by Russell Coutts, the expatriate Kiwi who helmed the victorious \"Black Magic\" in 1995 and \"New Zealand\" in 2000 as well as many other Kiwis.\n\nAnswer:The United States won the first step towards gaining independence from Great Britain when it declared independence from Great Britain on July 2, 1776 (although the event is now commemorated on July 4, the date when the Declaration of Independence was officially adopted by Congress) [1]. The Treaty of Paris was later signed on September 3, 1783, formally separating the United States from the British Empire [3].\n\nInstruction: Write an accurate, engaging, and concise answer for the given question using only the provided search results (some of which might be irrelevant) and cite them properly. Use an unbiased and journalistic tone. Always cite for any factual claim. When citing several search results, use [1][2][3]. Cite"
+        }
+    ]
+}

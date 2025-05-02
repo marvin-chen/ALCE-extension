@@ -23,4 +23,4 @@ export HF_DATASETS_CACHE="/scratch/network/$USER/.cache/huggingface/datasets"
 export TRANSFORMERS_CACHE="$HF_HOME/hub"
 export HF_HUB_OFFLINE=0
 
-python run.py --config configs/asqa_opt-6.7b_shot1_ndoc3_gtr_default.yaml
+python eval.py --f /results/asqa-opt-6.7b-gtr-shot1-ndoc3-42-quick_test3.json --citations --qa --no_rouge 

@@ -207,7 +207,8 @@ def compute_qa(data):
 
     # Load model
     logger.info("Loading the RoBERTa-large SQuAD model for QA-based accuracy...")
-    qa_pipeline = pipeline("question-answering", model=QA_MODEL, device=0)
+    qa_path = "/scratch/network/mh9610/.cache/huggingface/hub/models--gaotianyu1350--roberta-large-squad/snapshots/02bcd9fab9c9d84a346389074e0bcdf770c5141b"
+    qa_pipeline = pipeline("question-answering", model=qa_path, device=0, local_files_only=True)
     logger.info("Done")
 
     # Get prediction
@@ -283,8 +284,9 @@ def compute_claims(data):
     global autoais_model, autoais_tokenizer
     if autoais_model is None:
         logger.info("Loading AutoAIS model...")
-        autoais_model = AutoModelForSeq2SeqLM.from_pretrained(AUTOAIS_MODEL, torch_dtype=torch.bfloat16, max_memory=get_max_memory(), device_map="auto")
-        autoais_tokenizer = AutoTokenizer.from_pretrained(AUTOAIS_MODEL, use_fast=False)
+        model_path = "/scratch/network/mh9610/.cache/models--google--t5_xxl_true_nli_mixture/snapshots/aa6cfe1dd4257853bfdd772992045f41bfc14988"
+        autoais_model = AutoModelForSeq2SeqLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, max_memory=get_max_memory(), device_map="auto", local_files_only=True)
+        autoais_tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, local_files_only=True)
 
     logger.info("Computing claims...")
     scores = []
@@ -316,8 +318,9 @@ def compute_autoais(data,
     global autoais_model, autoais_tokenizer
     if autoais_model is None:
         logger.info("Loading AutoAIS model...")
-        autoais_model = AutoModelForSeq2SeqLM.from_pretrained(AUTOAIS_MODEL, torch_dtype=torch.bfloat16, max_memory=get_max_memory(), device_map="auto")
-        autoais_tokenizer = AutoTokenizer.from_pretrained(AUTOAIS_MODEL, use_fast=False)
+        model_path = "/scratch/network/mh9610/.cache/models--google--t5_xxl_true_nli_mixture/snapshots/aa6cfe1dd4257853bfdd772992045f41bfc14988"
+        autoais_model = AutoModelForSeq2SeqLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, max_memory=get_max_memory(), device_map="auto", local_files_only=True)
+        autoais_tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False, local_files_only=True)
 
     logger.info(f"Running AutoAIS...")
 
