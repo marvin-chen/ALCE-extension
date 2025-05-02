@@ -6,7 +6,7 @@
 "demos": [
     {
         "question": "Which is the most rainy place on earth?",
-        "answer": "Analysis: To determine the rainiest location, I need to compare annual rainfall records and official certifications.\nRelevant Documents: Document [3] discusses Mawsynram's 11,872mm average and Colombian claims. Document [1] notes Cherrapunji's historical records.\nSynthesis: While Colombia has higher reported numbers [3], Mawsynram holds the official Guinness record [3], with Cherrapunji maintaining specific monthly/yearly extremes [1].\nFinal Answer: Mawsynram, India holds the official record with 11,872mm annual rainfall [3], while Cherrapunji maintains extreme monthly/yearly records [1].",
+        "answer": "Analysis: To determine the rainiest place on Earth, I need to compare the reported average annual rainfall of different locations and consider which records are officially recognized.\nRelevant Documents: According to Document [3], Lloró, Colombia reported an average annual rainfall of 12,717 mm between 1952 and 1989, and López de Micay, Colombia reported 12,892 mm between 1960 and 2012. Document [3] also states that Mawsynram, India holds the official record with 11,872 mm. Document [1] notes that Sohra, India (Cherrapunji) holds the record for most rain in a calendar month (July 1861) and most rain in a year (August 1860 to July 1861).\nSynthesis: While Colombian towns have reported higher average annual rainfall, the official record is attributed to Mawsynram, India [3]. Cherrapunji is notable for its monthly and yearly rainfall records [1].\nFinal Answer: Several places on Earth claim to be the most rainy, such as Lloró, Colombia (12,717 mm) and López de Micay, Colombia (12,892 mm) [3]. However, the official record is held by Mawsynram, India with an average annual rainfall of 11,872 mm [3], although nearby Sohra, India (Cherrapunji) holds the record for most rain in a calendar month (July 1861) and most rain in a year (August 1860 to July 1861) [1].",
         "docs": [
                 {
                     "title": "Cherrapunji",
@@ -32,7 +32,7 @@
     },
     {
         "question": "When did the US break away from England?",
-        "answer": "Analysis: Requires identifying both the declaration and formal recognition dates.\nRelevant Documents: Document [2] cites the July 2, 1776 declaration. Document [3] references the 1783 Treaty of Paris.\nSynthesis: The Declaration [2] initiated independence, finalized by the Treaty [3].\nFinal Answer: The US declared independence on July 2, 1776 [2], formally recognized via the September 3, 1783 Treaty of Paris [3].",
+        "answer": "Analysis: To determine when the United States broke away from Great Britain, I need to identify both the date of the Declaration of Independence and when independence was formally recognized.\nRelevant Documents: Document [2] states that the United States declared independence from Great Britain on July 2, 1776, although this is commemorated on July 4, 1776, when the Declaration was officially adopted by Congress. Document [3] notes that the Treaty of Paris was signed on September 3, 1783, formally ending the conflict and confirming American independence.\nSynthesis: The United States began its break from Great Britain with the Declaration of Independence on July 2, 1776 [2], which is celebrated on July 4. The process was completed when Britain recognized American independence through the Treaty of Paris on September 3, 1783 [3].\nFinal Answer: The United States took the first step towards gaining independence from Great Britain when it declared independence on July 2, 1776 (commemorated on July 4, 1776, when the Declaration was officially adopted by Congress) [2]. The Treaty of Paris was later signed on September 3, 1783, formally separating the United States from the British Empire [3].",
         "docs": [
                 {
                     "title": "United States withdrawal from Saudi Arabia",
@@ -58,7 +58,7 @@
     },
     {
         "question": "Who set the record for longest field goal?",
-        "answer": "Analysis: Must distinguish between NFL records and all-time achievements.\nRelevant Documents: Document [1] notes Matt Prater's 64-yard NFL record. Document [2] describes Ove Johansson's 69-yard collegiate kick.\nSynthesis: Prater holds the NFL record [1], while Johansson has the overall longest kick [2].\nFinal Answer: Matt Prater holds the NFL record (64 yards) [1], but Ove Johansson's 69-yard kick is the longest overall [2].",
+        "answer": "Analysis: To answer who set the record for the longest field goal, I need to distinguish between the NFL record and the all-time record at any level.\nRelevant Documents: Document [1] states that Matt Prater set the NFL record with a 64-yard field goal in 2013. Document [2] notes that Ove Johansson set the all-time record with a 69-yard field goal in a 1976 Abilene Christian University game against East Texas State University.\nSynthesis: Matt Prater holds the NFL record for the longest field goal [1], but Ove Johansson's 69-yard kick is the longest at any level [2].\nFinal Answer: The record for the longest field goal in an NFL game was set by Matt Prater at 64 yards [1], but the record for the longest field goal at any level was 69 yards, kicked by collegiate kicker Ove Johansson in a 1976 Abilene Christian University football game against East Texas State University [2].",
         "docs": [
                 {
                     "title": "Field goal",
@@ -84,7 +84,7 @@
     },
     {
         "question": "Who played Galen in Planet of the Apes?",
-        "answer": "Analysis: Need to separate film vs. TV series portrayals.\nRelevant Documents: Document [2] lists Wright King in the 1968 film. Document [1] mentions Roddy McDowall in the TV series.\nSynthesis: Different actors portrayed Galen across media - King in film [2], McDowall in TV [1].\nFinal Answer: Wright King played Galen in the 1968 film [2], while Roddy McDowall portrayed him in the TV series [1].",
+        "answer": "Analysis: To answer who played Galen in Planet of the Apes, I need to distinguish between the film and the TV series adaptations.\nRelevant Documents: Document [2] states that in the 1968 film, Galen was played by Wright King. Document [1] indicates that in the TV series, Roddy McDowall played Galen.\nSynthesis: The role of Galen was portrayed by different actors in the film and TV series-Wright King in the film [2], and Roddy McDowall in the TV series [1].\nFinal Answer: In the 1968 film Planet of the Apes, Galen was played by Wright King [2]. And in the TV series Planet of the Apes, Galen was played by Roddy McDowall [1].",
         "docs": [
                 {
                     "title": "Planet of the Apes",
