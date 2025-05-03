@@ -1,0 +1,8 @@
+{
+    "instruction": "Instruction: Answer the question using only the provided documents. Think step by step and cite relevant documents in your answer using [1][2][3] notation.",
+    "demo_sep": "\n\n---\n\n",
+    "demo_prompt": "{INST}\n\nQuestion: {Q}\n\n{D}\nAnswer:",
+    "doc_prompt": "Document [{ID}](Title: {T}): {P}\n",
+    "demos": []
+}
+  
