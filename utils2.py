@@ -111,7 +111,8 @@ def load_model(model_name_or_path, dtype=torch.float16, int8=False, reserve_memo
     if int8:
         logger.warn("Use LLM.int8")
     start_time = time.time()
-    model_path  = "/scratch/gpfs/jl1543/.cache/models--meta-llama--Llama-3.1-8B/snapshots/d04e592bb4f6aa9cfee91e2e20afa771667e1d4b"
+    # model_path  = "/scratch/gpfs/jl1543/.cache/models--meta-llama--Llama-3.1-8B/snapshots/d04e592bb4f6aa9cfee91e2e20afa771667e1d4b"
+    model_path  = "/scratch/network/mh9610/.cache/models--meta-llama--Llama-3.1-8B/snapshots/d04e592bb4f6aa9cfee91e2e20afa771667e1d4b"
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
         device_map='auto',
