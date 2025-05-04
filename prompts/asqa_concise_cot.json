@@ -1,0 +1,73 @@
+{
+    "instruction": "Analyze documents step-by-step. Cite [1][2][3] immediately after factual claims. Keep answers concise.",
+    "demo_sep": "\n\n",
+    "demo_prompt": "Q: {Q}\nDocs:\n{D}\nA: {A}",
+    "doc_prompt": "[{ID}] {T}: {KEY_EXTRACT}",
+    "demos": [
+      {
+        "question": "Which is the most rainy place on earth?",
+        "answer": "1. Key comparisons:\n- Colombian claims: 12,717mm [3]/12,892mm [3]\n- Official record: Mawsynram (11,872mm) [3]\n- Extreme records: Cherrapunji (monthly/yearly) [1]\n2. Verification: Guinness recognizes Mawsynram [3]\nFinal: Mawsynram holds official record (11,872mm) [3]; Cherrapunji has extreme monthly records [1]",
+        "docs": [
+          {
+            "id": "1",
+            "title": "Cherrapunji",
+            "key_extract": "Holds all-time record for most rain in calendar month (July 1861) and year (1860-61)"
+          },
+          {
+            "id": "3",
+            "title": "Mawsynram",
+            "key_extract": "Official Guinness record holder at 11,872mm; disputes Colombian claims of higher totals"
+          }
+        ]
+      },
+      {
+        "question": "When did the US break away from England?",
+        "answer": "1. Key events:\n- Declaration: July 2, 1776 (adopted July 4) [2]\n- Formal recognition: Treaty of Paris, Sep 3, 1783 [3]\n2. Verification: Congress records [2], British archives [3]\nFinal: Independence declared July 2, 1776 [2]; finalized Sep 3, 1783 [3]",
+        "docs": [
+          {
+            "id": "2",
+            "title": "Decolonization of Americas",
+            "key_extract": "US declared independence July 2, 1776; commemorated July 4"
+          },
+          {
+            "id": "3",
+            "title": "American Revolution",
+            "key_extract": "Treaty of Paris signed Sep 3, 1783 formally ended conflict"
+          }
+        ]
+      },
+      {
+        "question": "Who set the record for longest field goal?",
+        "answer": "1. Distinguish records:\n- NFL: Matt Prater (64 yards) [1]\n- All-time: Ove Johansson (69 yards) [2]\n2. Verification: NFL statistics [1], NCAA archives [2]\nFinal: Prater holds NFL record [1]; Johansson has overall record [2]",
+        "docs": [
+          {
+            "id": "1",
+            "title": "Field goal",
+            "key_extract": "Matt Prater's 64-yard kick (2013) is NFL record"
+          },
+          {
+            "id": "2",
+            "title": "Field goal range",
+            "key_extract": "Ove Johansson's 69-yard kick (1976) remains all-time record"
+          }
+        ]
+      },
+      {
+        "question": "Who played Galen in Planet of the Apes?",
+        "answer": "1. Media differentiation:\n- 1968 film: Wright King [2]\n- TV series: Roddy McDowall [1]\n2. Verification: Film credits [2], series cast lists [1]\nFinal: Film - Wright King [2]; TV series - Roddy McDowall [1]",
+        "docs": [
+          {
+            "id": "1",
+            "title": "Planet of the Apes TV Series",
+            "key_extract": "Roddy McDowall played Galen in 1974 TV adaptation"
+          },
+          {
+            "id": "2",
+            "title": "Planet of the Apes (1968 film)",
+            "key_extract": "Wright King credited as surgeon Galen in original film"
+          }
+        ]
+      }
+    ]
+  }
+  
