@@ -211,6 +211,8 @@ def main():
     parser.add_argument("--max_doc_show", type=int, default=3, help="Max number of documents to show at one time.")
     parser.add_argument("--force_cite_show", type=bool, default=False, help="Force citing the documents that are shown to the model")
 
+    # Dynamic k passages
+    parser.add_argument("--dynamic_k", action="store_true", help="Adjust ndoc based on question complexity")
 
     # Load config
     args = parser.parse_args()
@@ -252,16 +254,44 @@ def main():
     # Generate the demonstration part
     head_prompt = ""
     train_ids = np.random.choice(len(prompt_data["demos"]), args.shot, replace=False)
+    
+    # Define the keywords for complex and simple questions
+    complex_keywords = [
+        "compare", "contrast", "difference", "relationship", "impact", "effect", "explain", "why", "how",
+        "analyze", "discuss", "evaluate", "summarize", "describe", "trace", "cause", "result", "process", "sequence"
+    ]
+    simple_keywords = [
+        "who", "when", "where", "define", "list", "name", "what is", "give", "identify"
+    ]
+
     for train_id in train_ids:
         train_item = prompt_data["demos"][train_id]
-        ndoc = args.ndoc
-        if args.no_doc_in_demo:
-            ndoc = 0
-        elif args.fewer_doc_in_demo:
-            assert args.ndoc_in_demo is not None
-            ndoc = args.ndoc_in_demo
+        # ndoc = args.ndoc
+        # if args.no_doc_in_demo:
+        #     ndoc = 0
+        # elif args.fewer_doc_in_demo:
+        #     assert args.ndoc_in_demo is not None
+        #     ndoc = args.ndoc_in_demo
+        # head_prompt += make_demo(
+        #     train_item, prompt=prompt_data["demo_prompt"], ndoc=ndoc, doc_prompt=prompt_data["doc_prompt"], 
+        #     instruction=prompt_data["instruction"], use_shorter=args.use_shorter 
+        # )
+        
+        # Dynamic ndoc logic
+        if args.dynamic_k:
+            q = train_item['question'].lower()
+            if any(kw in q for kw in complex_keywords) or (q.count(",") + q.count(" and ") + q.count(" or ")) > 1:
+                demo_ndoc = min(args.ndoc + 2, 8)
+            elif any(kw in q for kw in simple_keywords):
+                demo_ndoc = max(args.ndoc - 1, 3)
+            else:
+                demo_ndoc = args.ndoc
+        else:
+            demo_ndoc = args.ndoc
+
+        # Pass demo_ndoc to make_demo
         head_prompt += make_demo(
-            train_item, prompt=prompt_data["demo_prompt"], ndoc=ndoc, doc_prompt=prompt_data["doc_prompt"], 
+            train_item, prompt=prompt_data["demo_prompt"], ndoc=demo_ndoc, doc_prompt=prompt_data["doc_prompt"], 
             instruction=prompt_data["instruction"], use_shorter=args.use_shorter 
         )
         head_prompt += prompt_data["demo_sep"]
